@@ -73,6 +73,8 @@ readTime: 4 min read
 >
 > It's a good reminder that even relatively small visual effects can require experimentation before they behave the way you expect.
 >
+> ![](/images/blog/queuematbp.png)
+>
 > ## Small interactions, bigger worlds
 >
 > One of my goals with *Project Meridian* is to make the environment feel like more than a collection of static objects.
@@ -88,6 +90,8 @@ readTime: 4 min read
 > In this case, the orange glow immediately suggests that the player is interfering with the barrier.
 >
 > No tutorial message required.
+>
+> ![](/images/blog/queuebp.png)
 >
 > ## What's next?
 >
