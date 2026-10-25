@@ -1,0 +1,64 @@
+backend:
+  name: github
+  repo: waynebebay/sidequeststudios
+  branch: main
+
+media_folder: "public/images/blog"
+public_folder: "/images/blog"
+
+collections:
+  - name: "blog"
+    label: "Development Logs"
+    label_singular: "Development Log"
+    folder: "src/content/blog"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{slug}}"
+
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Description"
+        name: "description"
+        widget: "text"
+
+      - label: "Publication Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Project Meridian"
+          - "Blueprint Programming"
+          - "Environment Development"
+          - "Gameplay Programming"
+          - "Materials & Visual Effects"
+          - "Studio Updates"
+          - "Behind the Scenes"
+
+      - label: "Cover Image"
+        name: "coverImage"
+        widget: "image"
+        required: false
+
+      - label: "Featured Article"
+        name: "featured"
+        widget: "boolean"
+        default: false
+        required: false
+
+      - label: "Reading Time"
+        name: "readTime"
+        widget: "string"
+        required: false
+
+      - label: "Article Content"
+        name: "body"
+        widget: "markdown"
