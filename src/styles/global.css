@@ -1363,3 +1363,24 @@ em {
     font-size: 1rem;
   }
 }
+/* Tighten article header spacing */
+
+.article .article-lead {
+  margin-bottom: 1rem;
+}
+
+.article .article-date {
+  margin-bottom: 1.5rem;
+}
+/* ========================================
+   ARTICLE TITLE REFINEMENT
+   ======================================== */
+
+.article > h1 {
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  max-width: 900px;
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+}
