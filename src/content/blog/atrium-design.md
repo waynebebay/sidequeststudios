@@ -55,6 +55,8 @@ readTime: 4 min read
 >
 > The barrier is no longer just decoration. It's acknowledging the player's presence.
 >
+> ![Reaction](/images/blog/queuereaction.png "Queue Line Reaction")
+>
 > ## Adding distortion with World Position Offset
 >
 > Changing colors was a good starting point, but I wanted the hologram to behave as though its projection was being physically disrupted.
