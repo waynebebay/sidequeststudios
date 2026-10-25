@@ -30,6 +30,8 @@ collections:
         name: "date"
         widget: "datetime"
         format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
 
       - label: "Category"
         name: "category"
@@ -37,7 +39,7 @@ collections:
         options:
           - "Project Meridian"
           - "Blueprint Programming"
-          - "Environment Development"
+          - "Environment Design"
           - "Gameplay Programming"
           - "Materials & Visual Effects"
           - "Studio Updates"
