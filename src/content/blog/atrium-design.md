@@ -9,8 +9,6 @@ coverImage: /images/blog/queueline.png
 featured: true
 readTime: 4 min read
 ---
-> # Making Holographic Queue Barriers React to the Player
->
 > Sometimes, the smallest details can make a game world feel more alive.
 >
 > While developing the G.R.A.C.E. facility in *Project Meridian*, I started experimenting with a fairly ordinary environmental object: the queue barriers you'd expect to find in a waiting room.
@@ -104,5 +102,3 @@ readTime: 4 min read
 > And if there's one thing I've learned while developing *Project Meridian*, it's that sometimes the best ideas start with something as ridiculous as making a waiting-room queue barrier glow.
 >
 > **Until next time, keep exploring.**
->
->
