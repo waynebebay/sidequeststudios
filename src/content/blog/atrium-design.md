@@ -5,7 +5,7 @@ description: Turning an ordinary queue barrier into an interactive hologram
   effects.
 date: 2026-10-25
 category: Materials & Visual Effects
-coverImage: ""
+coverImage: /images/blog/queueline.png
 featured: true
 readTime: 4 min read
 ---
