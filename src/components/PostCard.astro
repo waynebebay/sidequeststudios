@@ -1,0 +1,6 @@
+---
+const {post,large=false}=Astro.props;
+const styles={'Development Journal':'violet','Unreal Engine 5':'cyan','Environment Design':'teal','Materials & VFX':'amber','Blueprint Programming':'cyan'};
+const color=styles[post.data.category] || 'cyan';
+---
+<a class:list={['post-card',large&&'large']} href={`/blog/${post.id}/`}><div class:list={['card-art',color]}><span class="card-art-icon" aria-hidden="true">{post.data.category==='Environment Design'?'◈':post.data.category==='Blueprint Programming'?'⌘':'✧'}</span><span class="art-corner">SQ / DEVLOG</span></div><div class="card-body"><span class:list={['tag',color]}>{post.data.category}</span><h3>{post.data.title}</h3><p>{post.data.description}</p><div class="card-meta"><time datetime={post.data.date.toISOString()}>{post.data.date.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})}</time><span>Read →</span></div></div></a>

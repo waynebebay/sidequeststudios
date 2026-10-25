@@ -1,0 +1,58 @@
+---
+const links = [
+  ["/", "Home"],
+  ["/projects/", "Projects"],
+  ["/blog/", "Blog"],
+  ["/about/", "About"],
+  ["/contact/", "Contact"],
+];
+
+const path = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="container nav-inner">
+
+    <!-- Studio Logo -->
+    <a
+      class="brand"
+      href="/"
+      aria-label="Side Quest Studios home"
+    >
+      <img
+        src="/images/SQS.png"
+        alt="Side Quest Studios"
+        class="brand-logo"
+      />
+    </a>
+
+    <!-- Navigation -->
+    <nav aria-label="Main navigation">
+      {
+        links.map(([url, label]) => (
+          <a
+            href={url}
+            class={
+              path === url ||
+              (url !== "/" && path.startsWith(url))
+                ? "active"
+                : ""
+            }
+          >
+            {label}
+          </a>
+        ))
+      }
+    </nav>
+
+  </div>
+</header>
+
+<style>
+  .brand-logo {
+    display: block;
+    width: auto;
+    height: 44px;
+    object-fit: contain;
+  }
+</style>

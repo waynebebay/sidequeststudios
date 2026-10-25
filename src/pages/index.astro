@@ -1,0 +1,132 @@
+---
+import Base from "../layouts/Base.astro";
+import PostCard from "../components/PostCard.astro";
+import { getCollection } from "astro:content";
+const posts = (await getCollection("blog"))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+---
+
+<Base title="Small Studio. Big Worlds.">
+  <section class="hero">
+    <div class="hero-landscape" aria-hidden="true">
+      <div class="orb"></div>
+      <div class="horizon"></div>
+      <div class="spire spire-one"></div>
+      <div class="spire spire-two"></div>
+      <div class="spire spire-three"></div>
+    </div>
+    <div class="hero-shade"></div>
+    <div class="container hero-content">
+      <span class="eyebrow boxed">INDEPENDENT GAME STUDIO</span>
+      <h1 class="reveal">
+        Small Studio.<br />
+        Big Worlds.
+    </h1>
+      <p class="reveal reveal-delay-1">
+        Independent game development, creative experimentation, and the journey
+        of bringing imaginary worlds to life.
+      </p>
+      <div class="actions reveal reveal-delay-3">
+        <a class="button primary" href="/projects/meridian/">
+          Explore Project Meridian <span>↗</span>
+        </a>
+        <a class="button secondary" href="/blog/">
+          Read the Dev Blog
+        </a>
+      </div>
+      <span class="scroll-note">SCROLL TO EXPLORE ↓</span>
+    </div>
+  </section>
+  <section class="section project-feature">
+    <div class="container feature-grid">
+      <div class="feature-art">
+        <div class="feature-orb"></div>
+        <div class="feature-gridlines"></div>
+        <span class="image-note">PROJECT MERIDIAN / WORLD IN PROGRESS</span>
+      </div>
+      <div class="feature-copy">
+        <span class="tag violet">● CURRENTLY IN DEVELOPMENT</span>
+        <h2>Project Meridian</h2>
+        <p>
+          An exploration of environmental storytelling, strange worlds, and
+          curious systems, built from the ground up in Unreal Engine 5.
+        </p>
+        <a class="text-link" href="/projects/meridian/">
+          Discover the project →
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="section blog-section">
+    <div class="container">
+      <span class="eyebrow">DEV BLOG</span>
+      <div class="section-heading">
+        <div>
+          <h2>Latest from the Blog</h2>
+          <p>
+            Development updates, technical deep-dives, and behind-the-scenes
+            looks at the studio.
+          </p>
+        </div>
+        <a class="text-link" href="/blog/">
+          View all posts →
+        </a>
+      </div>
+      <div class="post-grid">
+        {posts.map((post, i) => (
+          <PostCard post={post} large={i === 0} />
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="section philosophy">
+    <div class="container narrow">
+      <span class="eyebrow">PHILOSOPHY</span>
+      <h2>
+        Built with Craft.
+        <br />
+        Driven by Curiosity.
+      </h2>
+      <div class="quote-copy">
+        <p>
+          Side Quest Studios is a small independent game development studio
+          focused on building memorable worlds through environmental
+          storytelling and thoughtful interaction.
+        </p>
+        <p>
+          The process is exploratory by nature. Technical experimentation isn't
+          a detour; it's part of the adventure.
+        </p>
+        <p>
+          This blog is a record of that process: the breakthroughs, the dead
+          ends, and everything in between.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="section callout">
+    <div class="container callout-inner">
+      <div>
+        <span class="eyebrow">STAY IN THE LOOP</span>
+        <h2>
+          Follow the development
+          <br />
+          journey.
+        </h2>
+        <p>
+          Updates, technical articles, and a behind-the-scenes look at what
+          we're building.
+        </p>
+      </div>
+      <div class="actions">
+        <a class="button secondary" href="/blog/">
+          Explore the Blog
+        </a>
+        <a class="button outline" href="/contact/">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>

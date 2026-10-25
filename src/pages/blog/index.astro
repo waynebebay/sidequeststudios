@@ -1,0 +1,32 @@
+---
+import Base from "../../layouts/Base.astro";
+import PostCard from "../../components/PostCard.astro";
+import { getCollection } from "astro:content";
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<Base title="Developer Blog">
+  <section class="page-intro container">
+    <span class="eyebrow">THE DEVELOPMENT JOURNAL</span>
+    <h1 class="reveal">
+      Notes from the <em>side quest.</em>
+    </h1>
+    <p class="reveal reveal-delay-2">
+      Behind-the-scenes experiments, technical breakdowns, and progress reports
+      from the world of indie game development.
+    </p>
+  </section>
+  <section class="container section-tight">
+    <div class="filter-line">
+      <span>ALL ARTICLES</span>
+      <span>{posts.length} POSTS</span>
+    </div>
+    <div class="post-grid reveal reveal-delay-3">
+      {posts.map((post, i) => (
+        <PostCard post={post} large={i === 0} />
+      ))}
+    </div>
+  </section>
+</Base>

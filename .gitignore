@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Astro generated files
+dist/
+.astro/
+
+# Netlify
+.netlify/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Operating system files
+.DS_Store
+Thumbs.db
