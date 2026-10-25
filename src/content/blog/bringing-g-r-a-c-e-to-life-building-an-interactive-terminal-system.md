@@ -2,7 +2,7 @@
 title: "Bringing G.R.A.C.E. to Life: Building an Interactive Terminal System"
 description: How we turned a simple computer interface into an interactive
   storytelling tool inside Project Meridian.
-date: 2026-10-25
+date: 2026-10-23
 category: Blueprint Programming
 coverImage: /images/blog/grace.png
 featured: true
