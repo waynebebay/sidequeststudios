@@ -2,7 +2,7 @@
 title: Building Atmosphere Through Environmental Storytelling
 description: How lighting, environmental details, and abandoned spaces help
   bring the mysterious world of Project Meridian to life.
-date: 2026-10-25
+date: 2026-10-24
 category: Environment Design
 coverImage: /images/blog/environment.png
 featured: true
