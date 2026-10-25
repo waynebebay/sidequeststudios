@@ -2,31 +2,98 @@
 import Base from "../../layouts/Base.astro";
 import PostCard from "../../components/PostCard.astro";
 import { getCollection } from "astro:content";
+
+// Retrieve all articles, newest first
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
+
+// The three newest articles appear as cards
+const latestPosts = posts.slice(0, 3);
+
+// Everything older goes into the archive
+const archivedPosts = posts.slice(3);
 ---
 
 <Base title="Developer Blog">
+
+  <!-- PAGE INTRO -->
   <section class="page-intro container">
     <span class="eyebrow">THE DEVELOPMENT JOURNAL</span>
+
     <h1 class="reveal">
       Notes from the <em>side quest.</em>
     </h1>
+
     <p class="reveal reveal-delay-2">
       Behind-the-scenes experiments, technical breakdowns, and progress reports
       from the world of indie game development.
     </p>
   </section>
+
+  <!-- LATEST ARTICLES -->
   <section class="container section-tight">
+
     <div class="filter-line">
-      <span>ALL ARTICLES</span>
-      <span>{posts.length} POSTS</span>
+      <span>LATEST DEVELOPMENT LOGS</span>
+      <span>{latestPosts.length} POSTS</span>
     </div>
+
     <div class="post-grid reveal reveal-delay-3">
-      {posts.map((post, i) => (
+      {latestPosts.map((post, i) => (
         <PostCard post={post} large={i === 0} />
       ))}
     </div>
+
   </section>
+
+  <!-- DEVELOPMENT ARCHIVE -->
+  {archivedPosts.length > 0 && (
+    <section class="container blog-archive">
+
+      <div class="archive-header">
+        <span class="eyebrow">THE ARCHIVES</span>
+        <h2>Previous Development Logs</h2>
+        <p>
+          Every experiment, breakthrough, and questionable decision
+          along the way.
+        </p>
+      </div>
+
+      <div class="archive-list">
+
+        {archivedPosts.map((post) => (
+          <a
+            href={`/blog/${post.id}/`}
+            class="archive-entry"
+          >
+
+            <div class="archive-date">
+              {post.data.date.toLocaleDateString("en-US", {
+                month: "short",
+                day: "numeric",
+                year: "numeric"
+              })}
+            </div>
+
+            <div class="archive-content">
+
+              <span class="archive-category">
+                {post.data.category}
+              </span>
+
+              <h3>{post.data.title}</h3>
+
+            </div>
+
+            <span class="archive-arrow">↗</span>
+
+          </a>
+        ))}
+
+      </div>
+
+    </section>
+  )}
+
 </Base>
