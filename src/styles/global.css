@@ -223,7 +223,6 @@ em {
   background-position: center center;
   background-repeat: no-repeat;
 
-  filter: blur(20px);
   transform: scale(1.03);
 
   pointer-events: none;
