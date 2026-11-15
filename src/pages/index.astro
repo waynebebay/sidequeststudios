@@ -9,13 +9,7 @@ const posts = (await getCollection("blog"))
 
 <Base title="Small Studio. Big Worlds.">
   <section class="hero">
-    <div class="hero-landscape" aria-hidden="true">
-      <div class="orb"></div>
-      <div class="horizon"></div>
-      <div class="spire spire-one"></div>
-      <div class="spire spire-two"></div>
-      <div class="spire spire-three"></div>
-    </div>
+    <div class="hero-landscape" aria-hidden="true"></div>
     <div class="hero-shade"></div>
     <div class="container hero-content">
       <span class="eyebrow boxed">INDEPENDENT GAME STUDIO</span>
@@ -41,9 +35,13 @@ const posts = (await getCollection("blog"))
   <section class="section project-feature">
     <div class="container feature-grid">
       <div class="feature-art">
-        <div class="feature-orb"></div>
-        <div class="feature-gridlines"></div>
-        <span class="image-note">PROJECT MERIDIAN / WORLD IN PROGRESS</span>
+        <img
+           src="/images/projectmeridian.webp"
+            alt="Stylized wooden wagon surrounded by fantasy props and vegetation in Project Meridian"
+          loading="lazy"
+          decoding="async"
+        />
+           <span class="image-note">PROJECT MERIDIAN / WORLD IN PROGRESS</span>
       </div>
       <div class="feature-copy">
         <span class="tag violet">● CURRENTLY IN DEVELOPMENT</span>

@@ -216,10 +216,17 @@ em {
 }
 .hero-landscape {
   position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 58% 24%, #76504b5e, transparent 50%),
-    linear-gradient(180deg, #2c252b 0%, #332d31 50%, #102b35 100%);
+  inset: -20px;
+
+  background-image: url('/images/background_grace.webp');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  filter: blur(20px);
+  transform: scale(1.03);
+
+  pointer-events: none;
 }
 .hero-landscape:before {
   content: "";
@@ -290,9 +297,23 @@ em {
 .hero-shade {
   position: absolute;
   inset: 0;
+
   background:
-    linear-gradient(90deg, #0b0c11a6 0%, #0b0c115c 75%),
-    linear-gradient(0deg, #0b0c11 0%, transparent 36%);
+    linear-gradient(
+      90deg,
+      rgba(11, 12, 17, 0.70) 0%,
+      rgba(11, 12, 17, 0.35) 65%,
+      rgba(11, 12, 17, 0.25) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(11, 12, 17, 0.15) 0%,
+      rgba(11, 12, 17, 0.10) 45%,
+      rgba(11, 12, 17, 0.75) 80%,
+      #0a0b0f 100%
+    );
+
+  pointer-events: none;
 }
 .hero-content {
   position: relative;
@@ -332,16 +353,28 @@ em {
 }
 .feature-art {
   position: relative;
-  min-height: 330px;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 16 / 10;
+  align-self: center;
+
   border: 1px solid #176177;
   border-radius: 5px;
   overflow: hidden;
-  background: radial-gradient(
-    ellipse at 55% 45%,
-    #385b7e 0%,
-    #141c35 38%,
-    #080e19 75%
-  );
+  background: #080e19;
+}
+.feature-art img {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+
+  max-width: none;
 }
 .feature-orb {
   position: absolute;
@@ -902,7 +935,8 @@ em {
     flex-direction: column;
   }
   .feature-art {
-    min-height: 260px;
+    min-height: 0;
+    aspect-ratio: 16 / 10;
   }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
