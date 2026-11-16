@@ -1,41 +1,41 @@
 export const authors = {
   shane: {
-    name: "Shane",
+    name: "Shane Czajkowski",
     role: "Creative Director",
     image: "/images/team/shane.png",
   },
   cameron: {
-    name: "Cameron",
+    name: "Cameron McMillen",
     role: "Technical Lead",
     image: "/images/team/cameron.png",
   },
   luna: {
-    name: "Luna",
+    name: "Luna Croft",
     role: "Art Lead",
     image: "/images/team/luna.png",
   },
   christine: {
-    name: "Christine",
+    name: "Christine Lundberg",
     role: "3D Artist",
     image: "/images/team/christine.png",
   },
   kayla: {
-    name: "Kayla",
+    name: "Kayla Bennis",
     role: "3D Artist",
     image: "/images/team/kayla.png",
   },
   jason: {
-    name: "Jason",
+    name: "Jason McMillen",
     role: "Narrative Designer",
     image: "/images/team/jason.png",
   },
   ralph: {
-    name: "Ralph",
+    name: "Ralph Rivera",
     role: "UI/UX Artist",
     image: "/images/team/ralph.png",
   },
   nick: {
-    name: "Nick",
+    name: "Nick Williams",
     role: "Programmer",
     image: "/images/team/nick.png",
   },
