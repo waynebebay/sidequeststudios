@@ -1,5 +1,6 @@
 ---
 title: Making Holographic Queue Barriers React to the Player
+author: shane
 description: Turning an ordinary queue barrier into an interactive hologram
   using Unreal Engine 5 materials, collision detection, and dynamic visual
   effects.
