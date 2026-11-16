@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Side Quest Studios | Admin</title>
 </head>
 
@@ -11,6 +10,49 @@
   <h2>Side Quest Studios CMS</h2>
   <p>Initializing development dashboard...</p>
 
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script src="https://unpkg.com/decap-cms@3.0.0/dist/decap-cms.js"></script>
+
+  <script>
+    CMS.registerEditorComponent({
+      id: "video",
+      label: "Video Embed",
+
+      fields: [
+        {
+          name: "url",
+          label: "YouTube Video URL",
+          widget: "string",
+        },
+      ],
+
+      pattern: /^<iframe.*src="([^"]+)".*<\/iframe>$/,
+
+      fromBlock: function (match) {
+        return {
+          url: match[1],
+        };
+      },
+
+      toBlock: function (data) {
+        return `<iframe
+          width="100%"
+          height="450"
+          src="${data.url}"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>`;
+      },
+
+      toPreview: function (data) {
+        return `<iframe
+          width="100%"
+          height="315"
+          src="${data.url}"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>`;
+      },
+    });
+  </script>
 </body>
 </html>
