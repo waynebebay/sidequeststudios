@@ -22,6 +22,20 @@ collections:
         name: "title"
         widget: "string"
 
+      - label: "Author"
+        name: "author"
+        widget: "select"
+        options:
+          - { label: "Shane", value: "shane" }
+          - { label: "Cameron", value: "cameron" }
+          - { label: "Luna", value: "luna" }
+          - { label: "Christine", value: "christine" }
+          - { label: "Kayla", value: "kayla"}
+          - { label: "Jason", value: "jason"}
+          - { label: "Ralph", value: "ralph"}
+        default: "shane"
+        required: false
+
       - label: "Description"
         name: "description"
         widget: "text"
