@@ -1,5 +1,6 @@
 ---
 title: Building Atmosphere Through Environmental Storytelling
+author: shane
 description: How lighting, environmental details, and abandoned spaces help
   bring the mysterious world of Project Meridian to life.
 date: 2026-10-24
