@@ -204,6 +204,42 @@ em {
 .text-link:hover {
   text-decoration: underline;
 }
+
+/* Blog Author Profiles */
+
+.article-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+.author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.author-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f2f2f2;
+}
+
+.author-role {
+  font-size: 0.75rem;
+  color: #9b9b9b;
+}
+
 .hero {
   min-height: 760px;
   height: calc(100svh - 72px);

@@ -33,6 +33,7 @@ collections:
           - { label: "Kayla", value: "kayla"}
           - { label: "Jason", value: "jason"}
           - { label: "Ralph", value: "ralph"}
+          - { label: "Nick", value: "nick"}
         default: "shane"
         required: false
 

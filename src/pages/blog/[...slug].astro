@@ -1,12 +1,20 @@
 ---
 import Base from "../../layouts/Base.astro";
+import { authors } from "../../data/authors";
 import { getCollection, render } from "astro:content";
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
   return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
 }
+
 const { post } = Astro.props;
 const { Content } = await render(post);
+const authorId = post.data.author;
+
+const author =
+  authorId && Object.prototype.hasOwnProperty.call(authors, authorId)
+    ? authors[authorId as keyof typeof authors]
+    : null;
 ---
 
 <Base title={post.data.title} description={post.data.description}>
@@ -28,6 +36,24 @@ const { Content } = await render(post);
       <span>·</span>
       <span>{post.data.readTime || "Dev journal"}</span>
     </div>
+    {author && (
+      <div class="article-author">
+        <img
+          src={author.image}
+          alt={`${author.name}'s profile picture`}
+          class="author-avatar"
+          width="44"
+          height="44"
+          loading="lazy"
+        />
+
+        <div class="author-details">
+          <span class="author-name">{author.name}</span>
+          <span class="author-role">{author.role}</span>
+        </div>
+      </div>
+    )}
+    
         <div class:list={["article-banner", { "has-cover": !!post.data.coverImage }]}>
         {post.data.coverImage && (
             <img
