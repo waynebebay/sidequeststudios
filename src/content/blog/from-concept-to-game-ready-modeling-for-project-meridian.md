@@ -1,5 +1,6 @@
 ---
 title: "From Concept to Game-Ready: Modeling for Project Meridian"
+author: shane
 description: A behind-the-scenes look at our hard-surface modeling workflow,
   from sculpting and topology challenges to preparing 3D assets for Unreal
   Engine 5.
