@@ -1,5 +1,6 @@
 ---
 title: "Bringing G.R.A.C.E. to Life: Building an Interactive Terminal System"
+author: shane
 description: How we turned a simple computer interface into an interactive
   storytelling tool inside Project Meridian.
 date: 2026-10-23
