@@ -3,6 +3,8 @@ backend:
   repo: waynebebay/sidequeststudios
   branch: main
 
+publish_mode: editorial_workflow
+
 media_folder: "public/images/blog"
 public_folder: "/images/blog"
 
