@@ -6,7 +6,7 @@ description: Our environment artist walks through designing modular pipes and
   ‘Gardenur Punk’ style shaped them.
 date: 2026-11-17
 category: Environment Design
-coverImage: /images/blog/cover.png
+coverImage: /images/blog/ingamerenders.png
 featured: false
 readTime: 4 Minutes
 ---
